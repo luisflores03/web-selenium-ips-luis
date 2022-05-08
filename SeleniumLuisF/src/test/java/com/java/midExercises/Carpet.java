@@ -1,5 +1,5 @@
-package com.java.midExcersises;
-
+package com.java.midExercises;
+//Class for the second exercise
 public class Carpet {
 	private double cost;
 
@@ -10,8 +10,12 @@ public class Carpet {
 		}
 		this.cost = cost;
 	}
+	//getter and setter for the cost variable
 	public double getCost() {
 		return this.cost;
+	}
+	public void setCost(double cost) {
+		this.cost = cost;
 	}
 
 }

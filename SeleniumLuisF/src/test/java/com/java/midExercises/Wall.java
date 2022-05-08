@@ -1,9 +1,11 @@
-package com.java.midExcersises;
+package com.java.midExercises;
 
+//Creation of the class for the first excerCise
 public class Wall {
 	private double width,height;
+	//First constructor(no params)
 	public Wall() {}
-
+	//First constructor(two double type params)
 	public Wall(double width, double height) {
 		if (width>=0) {
 			this.width = width;
@@ -18,7 +20,7 @@ public class Wall {
 			this.height = 0;
 		}
 	}
-
+	//Getters and setters for the variables width and height
 	public double getWidth() {
 		return width;
 	}
@@ -42,6 +44,7 @@ public class Wall {
 		}
 		this.height = height;
 	}
+	//method to return the area of the wall
 	public double getArea() {
 		return height*width;
 	}

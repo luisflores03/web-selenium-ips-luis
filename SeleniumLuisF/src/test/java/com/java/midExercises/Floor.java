@@ -1,9 +1,10 @@
-package com.java.midExcersises;
+package com.java.midExercises;
 
-public class Rectangle {
+//Class for the second exercise
+public class Floor {
 	private double width,length;
-
-	public Rectangle(double width, double length) {
+	//Constructor for the floor class
+	public Floor(double width, double length) {
 		if (width>=0) {
 			this.width = width;
 		}
@@ -17,13 +18,10 @@ public class Rectangle {
 			this.length = 0;
 		}
 	}
-	public double getLength() {
-		return length;
-	}
-	public double getWidth() {
-		return width;
-	}
+	//method to get the area of the floor
 	public double getArea() {
 		return length*width;
 	}
+	
+
 }
