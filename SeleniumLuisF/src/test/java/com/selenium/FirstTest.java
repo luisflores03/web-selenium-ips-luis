@@ -23,6 +23,7 @@ public class FirstTest {
 		String a = driver.findElement(By.xpath("//tbody//tr[1]//td[1]/a")).getText();
 		System.out.println(a);
 		Assert.assertEquals(a, "ACE");
+		driver.close();
 		
   }
 }
