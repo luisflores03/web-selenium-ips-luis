@@ -19,6 +19,7 @@ public class AddComputerPage extends Base {
 	By alert = By.xpath("//div[@class='alert-message warning']");
 	By srcComputer = By.xpath("//input[@id='searchbox']");
 	By srcSubmit = By.xpath("//input[@id='searchsubmit']");
+	By selectSearch = By.xpath("//tbody//tr[1]//td[1]/a");
 	//customize methods
 	public String addComputer(String Name, String Introduced, String Discontinued, String Company) throws InterruptedException{
 		waitForElementPresent(addComputer);
@@ -37,6 +38,8 @@ public class AddComputerPage extends Base {
 		waitForElementPresent(srcComputer);
 		type(srcComputer,Name);
 		click(srcSubmit);
+		waitForElementPresent(selectSearch);
+		click(selectSearch);
 		waitForElementPresent(drpCompany);
 		dropdown(drpCompany,Company);
 		click(btnSubmit);
