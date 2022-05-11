@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LuisTestSuite" parallel="tests" thread-count="3">
+<test name = "TC001">
+<classes>
+<class name="com.computer_database.AddComputerTest"></class>
+</classes>
+</test>
+</suite>
