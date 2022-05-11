@@ -17,6 +17,8 @@ public class AddComputerPage extends Base {
 	By drpCompany = By.xpath("//select[@id='company']");
 	By btnSubmit = By.xpath("//input[@class='btn primary']");
 	By alert = By.xpath("//div[@class='alert-message warning']");
+	By srcComputer = By.xpath("//input[@id='searchbox']");
+	By srcSubmit = By.xpath("//input[@id='searchsubmit']");
 	//customize methods
 	public String addComputer(String Name, String Introduced, String Discontinued, String Company) throws InterruptedException{
 		waitForElementPresent(addComputer);
@@ -30,7 +32,15 @@ public class AddComputerPage extends Base {
 		waitForElementPresent(alert);
 		String alertMessage = read(alert);
 		return alertMessage;
-
-
+	}
+	public String updateComputer(String Name,String Company) throws InterruptedException{
+		waitForElementPresent(srcComputer);
+		type(srcComputer,Name);
+		click(srcSubmit);
+		waitForElementPresent(drpCompany);
+		dropdown(drpCompany,Company);
+		click(btnSubmit);
+		String alertMessage = read(alert);
+		return alertMessage;
 	}
 }

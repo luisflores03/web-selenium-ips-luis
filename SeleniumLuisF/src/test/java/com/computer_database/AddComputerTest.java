@@ -17,7 +17,7 @@ public class AddComputerTest {
 	Base base;
 	AddComputerPage computerPage;
 	//Instancias
-	String name,introduced,discontinued,company,alert;
+	String name,introduced,discontinued,company,alert,updateName,updateCompany,updateAlert;
 	  @BeforeTest
 	  public void beforeTest() throws FileNotFoundException{
 		  base = new Base(driver);
@@ -29,6 +29,9 @@ public class AddComputerTest {
 		  this.discontinued = base.getJSONValue("testdata", "discontinued");
 		  this.company = base.getJSONValue("testdata", "company");
 		  this.alert = base.getJSONValue("testdata", "AlertMessage");
+		  this.updateName = base.getJSONValue("testdata", "updateName");
+		  this.updateCompany = base.getJSONValue("testdata", "updateCompany");
+		  this.updateAlert = base.getJSONValue("testdata", "alertMessageUpdate");
 	  }
 	  @Test
 	  public void TC001() throws InterruptedException{
@@ -38,6 +41,10 @@ public class AddComputerTest {
 	  }
 	  @Test
 	  public void TC002() throws InterruptedException{
+		  base.launchBrowser(GlobalVariables.URL);
+		  String alertMessage =computerPage.updateComputer(updateName, updateCompany); 
+		  Assert.assertEquals(alertMessage, updateAlert);
+		  
 	  }
 	  @AfterTest
 	  public void afterTest() {

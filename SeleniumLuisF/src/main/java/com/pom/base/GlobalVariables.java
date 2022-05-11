@@ -6,3 +6,4 @@ public class GlobalVariables {
 	public static final String PATH_SCREENSHOTS = System.getProperty("user.dir")+"/test-output/screenshots/";
 
 }
+
