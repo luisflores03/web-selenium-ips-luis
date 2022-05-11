@@ -32,6 +32,7 @@ public class AddComputerPage extends Base {
 		click(btnSubmit);
 		waitForElementPresent(alert);
 		String alertMessage = read(alert);
+		takeScreenshot("ComputerCreated");
 		return alertMessage;
 	}
 	public String updateComputer(String Name,String Company) throws InterruptedException{
@@ -44,6 +45,7 @@ public class AddComputerPage extends Base {
 		dropdown(drpCompany,Company);
 		click(btnSubmit);
 		String alertMessage = read(alert);
+		takeScreenshot("ComputerUpdated");
 		return alertMessage;
 	}
 }
